@@ -216,29 +216,40 @@ Steps:
 
 ---
 
-## 15. Post-Install Plans (To Do)
+## 15. Post-install networking troubleshooting
 
-- Install latest chipset drivers from ASUS/AMD.
-- Run Windows Updates.
-- Install monitoring tools (HWInfo, CPU-Z, etc.) and stress-test the system.
-- Set up:
-  - Virtualization / lab environment
-  - Security tools and network labs for cybersecurity practice.
-- Optionally revisit BIOS to:
-  - Confirm boot order
-  - Enable Secure Boot after Windows is fully installed.
+During Windows setup, **Device Manager displayed an unrecognized Network Controller**. Rather than guessing, I inspected the device's Hardware IDs, which showed PCI vendor `10EC` (Realtek) and device `B852`. I staged chipset and wireless networking driver packages on removable installation media and examined the ASUS motherboard support download options. A later photograph shows Windows connected to Wi-Fi.
+
+This record establishes the symptom, investigation, driver-source research, and observed connected state. The images do **not** establish which exact driver package or version ultimately resolved the problem, so no unsupported installation sequence is claimed.
+
+**Lesson:** When Windows lacks a driver, the Hardware IDs and the manufacturer's verified support page are better starting points than selecting an arbitrary driver by name.
 
 ---
 
-## 16. Summary
+## 16. Firmware virtualization support
 
-This build went from:
-- Unboxing parts
-- Confusion around CPU orientation, case layout, standoffs, and hub wiring
-- Breadboard testing
-- Full case install
-- Successful BIOS POST and Windows 10 Pro install
+A later BIOS configuration session shows AMD **SVM Mode** initially set to **Disabled**, then changed to **Enabled**. SVM exposes the processor's virtualization support for hypervisors such as Oracle VirtualBox, which I subsequently used to host my Windows Server and Windows client lab.
 
-to a fully functioning system I can now use for IT labs and daily work.
+This is evidence of the setting being changed; the screenshots alone are not evidence of benchmark performance or any unrelated firmware security feature.
 
-This repo serves as a **technical build log** and a reference for future builds and troubleshooting.
+**Lesson:** Confirm virtualization features in firmware when preparing a machine to run VMs rather than assuming they are enabled by default.
+
+---
+
+## 17. Further validation and future maintenance
+
+- Initial POST and UEFI device detection: **completed and photographed**.
+- Windows 10 Pro first-time setup: **completed according to the original build record**.
+- Post-install network-driver investigation: **documented by screenshots**, with later working Wi-Fi.
+- AMD SVM virtualization: **enabled**, supported by before-and-after BIOS photographs.
+- Windows 11 and VirtualBox home-lab usage: **subsequent use of the completed host**.
+- Full-duration stress testing, benchmark results, or thermal load testing: **not established by this record**.
+- Future upkeep: verify vendor firmware/driver updates, monitor system health, and preserve useful configuration records.
+
+---
+
+## 18. Summary
+
+The project progressed from parts identification, AM4 CPU installation, memory and NVMe setup, and pre-case bench testing through in-case power/cable assembly, successful POST and Windows installation. It also gave me a real case of post-install network-driver troubleshooting and the firmware configuration needed for virtualization.
+
+The assembled system now serves as the base for independent IT administration and cybersecurity home-lab projects. This documentation describes my hands-on work without presenting it as paid professional experience.
