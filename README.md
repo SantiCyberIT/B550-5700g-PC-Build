@@ -28,14 +28,47 @@ The finished PC became the host for my [Home IT & Cybersecurity Lab](https://git
 
 ## What I implemented
 
-1. **Prepared the work area:** Used an anti-static mat and wrist strap while handling components.
-2. **Installed core hardware:** Seated the AM4 CPU, mounted the cooler, installed dual-channel RAM, and secured the NVMe drive under the M.2 heatsink.
-3. **Performed a bench test:** Powered the motherboard outside the case with essential components connected to isolate hardware issues before case installation.
-4. **Completed the case build:** Mounted the PSU and motherboard, checked standoff placement, routed power leads, and connected front-panel, fan, and addressable RGB headers.
-5. **Validated firmware detection:** Reached the UEFI/BIOS setup screen, checked CPU, RAM, and SSD recognition, and enabled DOCP Profile 1 for the memory.
-6. **Installed the OS:** Booted a Windows 10 Pro USB installer, selected the NVMe drive, and completed first-time setup.
+The screenshots and photos below come from my own build. They are arranged in the same order as the project work, with the complete [photo-by-photo technical build log](build-log.md) documenting additional components and wiring.
 
-Read the full step-by-step [build log and troubleshooting record](build-log.md).
+### 1. Motherboard preparation and CPU installation
+
+I prepared the board for assembly, aligned the Ryzen 7 5700G to the AM4 socket, corrected an initial orientation mistake without forcing the pins, and locked the socket lever.
+
+![Ryzen 7 5700G correctly seated in the ASUS TUF B550 AM4 socket](Photos/02-ryzen-5700g-seated-am4.jpg)
+
+### 2. Cooling, memory, and NVMe storage
+
+I cleaned and reapplied thermal paste, secured the Wraith cooler using alternating turns of the spring-loaded screws, installed the two 16 GB RAM modules in **A2/B2** for dual-channel operation, and installed the 1 TB NVMe SSD under the M.2 heatsink.
+
+![Two Apacer DDR4 memory modules installed in the A2 and B2 slots](Photos/05-apacer-ddr4-a2-b2-installed.jpg)
+
+![M.2 slot exposed for SSD installation with its heatsink removed](Photos/07-m2-socket-heatsink-removed.jpg)
+
+### 3. Bench testing before case assembly
+
+Before installing the motherboard inside the case, I connected essential power, memory, cooling, and display components on the motherboard box. The system powered on and reached the firmware POST screen, identifying the CPU, 32 GB RAM, and WD Blue NVMe drive.
+
+![Successful bench POST showing processor memory and SSD detection with the motherboard outside the case](Photos/08-bench-post-detected-components.jpg)
+
+### 4. Case assembly, wiring, and fan control
+
+I mounted the Corsair PSU and motherboard in the Montech case, checked standoff alignment, and connected the 24-pin ATX, 8-pin CPU, front-panel, fan, and 5 V ARGB wiring. The [detailed build log](build-log.md) includes close-ups of the individual connectors and cable routing.
+
+![Motherboard installed in the Montech Air 903 Max chassis with CPU cooler and RAM visible](Photos/11-motherboard-inside-case.jpg)
+
+### 5. In-case startup and firmware checks
+
+The system completed POST after case installation, and I checked the CPU, RAM, SSD, and temperatures in the ASUS UEFI/BIOS. The photographed screen shows the original DDR4-2133 setting with DOCP disabled at that point; the build log records enabling **DOCP Profile 1** afterward.
+
+![ASUS UEFI reporting Ryzen 7 5700G 32 GB RAM NVMe storage and CPU temperature around 42 Celsius](Photos/16-uefi-bios-hardware-temperature.jpg)
+
+### 6. Windows installation and completed hardware
+
+I booted the Windows 10 Pro installer from USB, installed Windows onto the NVMe SSD, and completed initial setup. I later moved to Windows 11 for my home-lab host. The working case fans and RGB lighting are visible in the finished build.
+
+![Completed PC with three illuminated front fans behind the Montech mesh panel](Photos/19-completed-montech-front-rgb.jpg)
+
+Read the [full assembly, wiring, verification, and troubleshooting log](build-log.md).
 
 ## Verification and results
 
@@ -67,7 +100,17 @@ The build also produced two useful troubleshooting/configuration exercises:
 
 **Unrecognized network controller:** Following Windows installation, Device Manager showed an unknown network controller. I inspected its PCI hardware ID (`VEN_10EC / DEV_B852`), gathered driver packages using removable media, and consulted the motherboard vendor's support downloads. A later photo records a successful Wi-Fi connection. The exact driver version finally installed was not separately captured, so this is documented as a troubleshooting sequence rather than an invented driver-installation procedure.
 
+
+![Device Manager showing the unrecognized network controller and its PCI hardware IDs](Photos/20-device-manager-missing-network-driver.jpg)
+
 **Enabling virtualization:** Firmware screenshots show AMD **SVM Mode** first set to *Disabled* and subsequently *Enabled*. This configuration is relevant to using the system as the host of my VirtualBox home lab.
+
+
+The original setting and the later enabled state are both captured:
+
+![ASUS UEFI SVM Mode disabled before configuring virtualization](Photos/23-svm-virtualization-before-disabled.jpg)
+
+![ASUS UEFI SVM Mode enabled after configuring virtualization](Photos/24-svm-virtualization-after-enabled.jpg)
 
 These additional steps connect the hardware build to practical IT support skills: reading hardware IDs, selecting drivers from manufacturer sources, confirming connectivity, and checking virtualization prerequisites.
 
@@ -78,7 +121,7 @@ PC component identification and installation · ESD-aware handling · AM4 CPU/co
 ## Documentation and next steps
 
 - [Detailed chronological build log](build-log.md) — assembly steps, decisions, troubleshooting, and outcomes
-- [Build photos folder](Photos/) — photo evidence will be organized and integrated alongside the relevant build steps
+- [Build photos folder](Photos/) — all 24 curated photographs, also embedded next to their corresponding steps in the [detailed build log](build-log.md)
 - [Home IT & Cybersecurity Lab](https://github.com/SantiCyberIT/Home-IT-Lab) — the technical lab hosted on this PC
 
 **Documentation scope:** This is a personal, independently completed project. Only observed steps and results are presented as completed. Future photo additions and any new diagnostic tests will be documented separately.
