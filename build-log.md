@@ -16,6 +16,12 @@ This file is a chronological log of building my PC from parts, including the sma
 - PSU: Corsair RM850x (850W, fully modular)
 - Case: Montech Air 903 Max (3x front fans, 1x rear fan, fan/RGB hub)
 
+### Photo evidence
+
+![ASUS TUF B550 motherboard before component installation](Photos/01-motherboard-before-assembly.jpg)
+
+*Starting motherboard, before adding the CPU, RAM, or CPU cooler.*
+
 ---
 
 ## 2. Workspace & ESD Prep
@@ -39,6 +45,12 @@ This file is a chronological log of building my PC from parts, including the sma
 
 **Lesson:** If the CPU doesn’t drop in easily, stop and recheck the triangle orientation. Don’t push.
 
+### Photo evidence
+
+![Ryzen 7 5700G seated in AM4 motherboard socket](Photos/02-ryzen-5700g-seated-am4.jpg)
+
+*The Ryzen 7 5700G seated in its AM4 socket before the cooler was attached.*
+
 ---
 
 ## 4. Thermal Paste & Cooler Mounting
@@ -56,6 +68,16 @@ This file is a chronological log of building my PC from parts, including the sma
 
 **Lesson:** The cooler will fight you a bit with the springs. Tighten gradually and alternate sides.
 
+### Photo evidence
+
+![New thermal paste applied to the Ryzen processor](Photos/03-arctic-mx6-thermal-paste.jpg)
+
+*Fresh thermal paste on the processor, before installing the cooler.*
+
+![AMD Wraith processor cooler installed on the B550 motherboard](Photos/04-wraith-cooler-mounted.jpg)
+
+*The Wraith cooler after seating it over the CPU.*
+
 ---
 
 ## 5. RAM Installation
@@ -68,6 +90,12 @@ This file is a chronological log of building my PC from parts, including the sma
 
 **Lesson:** Some boards only have one side that clips – that’s normal.
 
+### Photo evidence
+
+![Two Apacer NOX DDR4 modules installed in A2 and B2 memory slots](Photos/05-apacer-ddr4-a2-b2-installed.jpg)
+
+*Both Apacer memory sticks installed in the intended dual-channel slots.*
+
 ---
 
 ## 6. NVMe SSD Installation
@@ -79,6 +107,16 @@ This file is a chronological log of building my PC from parts, including the sma
 5. Reinstalled the heatsink over the SSD (making sure the thermal pad contacted the drive).
 
 **Lesson:** The M.2 area can be confusing when there are multiple covers. Take time to confirm which one is the actual slot.
+
+### Photo evidence
+
+![Western Digital Blue SN5000 one terabyte M.2 SSD before installation](Photos/06-wd-blue-sn5000-nvme.jpg)
+
+*The NVMe drive before installation.*
+
+![Motherboard M.2 socket exposed with heatsink removed](Photos/07-m2-socket-heatsink-removed.jpg)
+
+*The motherboard M.2 slot with its cover removed for the SSD installation.*
 
 ---
 
@@ -105,6 +143,12 @@ To avoid building everything in the case and then discovering a dead part, I did
 
 **Lesson:** Breadboarding first is worth it. It confirms the core components work before dealing with case wiring.
 
+### Photo evidence
+
+![Successful test boot outside the case with American Megatrends POST and motherboard](Photos/08-bench-post-detected-components.jpg)
+
+*Successful out-of-case POST: the firmware identifies the Ryzen 7 5700G, 32 GB memory, and WD Blue SN5000. The initial keyboard warning is visible because no keyboard was connected for this test.*
+
 ---
 
 ## 8. Case Prep & PSU Installation
@@ -123,6 +167,16 @@ To avoid building everything in the case and then discovering a dead part, I did
    - SATA power cable (for fan/RGB hub)
    - Any extra PCIe/SATA cables were left available for future use.
 
+### Photo evidence
+
+![Empty Montech Air 903 Max case showing three intake fans](Photos/09-montech-case-before-install.jpg)
+
+*Open chassis and preinstalled front fans before installing components.*
+
+![Corsair power supply mounted in lower case chamber](Photos/10-corsair-rm850x-installed.jpg)
+
+*The Corsair PSU secured in the lower case compartment.*
+
 ---
 
 ## 9. Motherboard Installation in Case
@@ -138,6 +192,16 @@ To avoid building everything in the case and then discovering a dead part, I did
    - Then tightened them snugly (not over-torqued) in a cross pattern.
 
 **Lesson:** Extra standoffs with no matching hole are a short risk. In this case, the standoffs matched perfectly, so no changes were needed.
+
+### Photo evidence
+
+![ASUS B550 motherboard mounted inside Montech case](Photos/11-motherboard-inside-case.jpg)
+
+*Motherboard, cooler, and memory installed in the chassis.*
+
+![Power cable routed through case cutout to motherboard](Photos/12-eps-cpu-power-routing.jpg)
+
+*View of power cable routing near the upper motherboard area.*
 
 ---
 
@@ -158,6 +222,12 @@ Steps:
   - Motherboard → single fan header (CHA_FAN) for RPM/control  
 - ARGB is **3-pin 5V**, not 4-pin 12V RGB.
 
+### Photo evidence
+
+![Close-up of three-pin addressable RGB connector](Photos/14-5v-argb-connector.jpg)
+
+*Three-pin addressable RGB connector documented during identification and wiring; verify 5 V pinout before connecting.*
+
 ---
 
 ## 11. Front Panel & I/O Connections
@@ -172,6 +242,16 @@ Steps:
    - USB-C or extra USB headers if supported by the motherboard
 3. Double-checked that no cables were under the motherboard and that everything routed cleanly.
 
+### Photo evidence
+
+![Internal USB front panel cable connector photographed before connection](Photos/13-usb-front-panel-connector.jpg)
+
+*Front-panel USB cable identified during wiring.*
+
+![In-case cable connections before final organization](Photos/15-preliminary-cable-connections.jpg)
+
+*The in-progress wiring state, including power and front-panel leads, before tidying.*
+
 ---
 
 ## 12. First Power-On in Case
@@ -185,6 +265,20 @@ Steps:
    - Case/RGB lighting active
 4. System POSTed successfully and entered BIOS.
 
+### Photo evidence
+
+![Built PC switched on showing internal fans and RGB components](Photos/17-system-built-first-lighting.jpg)
+
+*First powered-on system with illuminated components.*
+
+![Internal view of completed RGB-lit PC through side panel](Photos/18-built-pc-rgb-side-view.jpg)
+
+*A side-panel view showing the running RGB fans, RAM lighting, and core hardware.*
+
+![Finished Montech PC with three illuminated front fans](Photos/19-completed-montech-front-rgb.jpg)
+
+*Completed chassis with its three front RGB fans visible through the mesh.*
+
 ---
 
 ## 13. BIOS Configuration
@@ -197,6 +291,12 @@ Steps:
      - CPU ~ low 40s °C in BIOS (normal)
 2. Enabled **DOCP Profile 1** to run RAM at its rated speed (instead of 2133 MHz).
 3. Verified boot priority and UEFI mode for OS installation.
+
+### Photo evidence
+
+![ASUS UEFI EZ Mode listing CPU memory NVMe and temperatures](Photos/16-uefi-bios-hardware-temperature.jpg)
+
+*UEFI hardware/temperature check: CPU approximately 42 °C, 32 GB detected in A2/B2, and WD Blue SN5000 listed. This image shows DOCP disabled when photographed; the build log separately records enabling it afterward.*
 
 ---
 
@@ -224,6 +324,20 @@ This record establishes the symptom, investigation, driver-source research, and 
 
 **Lesson:** When Windows lacks a driver, the Hardware IDs and the manufacturer's verified support page are better starting points than selecting an arbitrary driver by name.
 
+### Photo evidence
+
+![Windows Device Manager unknown network controller hardware identifiers](Photos/20-device-manager-missing-network-driver.jpg)
+
+*Device Manager hardware ID evidence for the unrecognized Realtek PCI network controller.*
+
+![Bootable USB drive containing network and chipset driver files](Photos/21-usb-install-media-driver-files.jpg)
+
+*Removable installation media containing staged driver packages.*
+
+![ASUS support page listing Realtek and MediaTek WiFi driver options](Photos/22-asus-support-wifi-driver-options.jpg)
+
+*Comparing official motherboard Wi-Fi driver listings; this is not proof that a particular version was installed.*
+
 ---
 
 ## 16. Firmware virtualization support
@@ -233,6 +347,16 @@ A later BIOS configuration session shows AMD **SVM Mode** initially set to **Dis
 This is evidence of the setting being changed; the screenshots alone are not evidence of benchmark performance or any unrelated firmware security feature.
 
 **Lesson:** Confirm virtualization features in firmware when preparing a machine to run VMs rather than assuming they are enabled by default.
+
+### Photo evidence
+
+![ASUS UEFI SVM Mode set to Disabled](Photos/23-svm-virtualization-before-disabled.jpg)
+
+*Initial firmware state: AMD SVM Mode disabled.*
+
+![ASUS UEFI SVM Mode set to Enabled](Photos/24-svm-virtualization-after-enabled.jpg)
+
+*Later firmware state: AMD SVM Mode enabled in preparation for virtualization.*
 
 ---
 
