@@ -61,6 +61,16 @@ These are **checks actually recorded during the build**, not a claim that formal
 
 These experiences helped reinforce a repeatable habit: **verify assumptions, isolate variables, and test before moving to the next stage**.
 
+## Post-install networking and virtualization
+
+The build also produced two useful troubleshooting/configuration exercises:
+
+**Unrecognized network controller:** Following Windows installation, Device Manager showed an unknown network controller. I inspected its PCI hardware ID (`VEN_10EC / DEV_B852`), gathered driver packages using removable media, and consulted the motherboard vendor's support downloads. A later photo records a successful Wi-Fi connection. The exact driver version finally installed was not separately captured, so this is documented as a troubleshooting sequence rather than an invented driver-installation procedure.
+
+**Enabling virtualization:** Firmware screenshots show AMD **SVM Mode** first set to *Disabled* and subsequently *Enabled*. This configuration is relevant to using the system as the host of my VirtualBox home lab.
+
+These additional steps connect the hardware build to practical IT support skills: reading hardware IDs, selecting drivers from manufacturer sources, confirming connectivity, and checking virtualization prerequisites.
+
 ## Skills practiced
 
 PC component identification and installation · ESD-aware handling · AM4 CPU/cooler installation · Dual-channel RAM installation · NVMe installation · ATX power and front-panel cabling · 5 V ARGB versus 12 V RGB distinctions · UEFI/BIOS navigation · POST verification · Bootable USB installation · Basic hardware troubleshooting · Technical documentation
